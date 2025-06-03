@@ -20,7 +20,7 @@ export class SnippetsController {
     return this.snippetsService.create(user.id, createSnippetDto);
   }
   
-  @Post()
+  @Post('/update')
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
   @ApiOperation({ summary: '更新代码片段', description: '用户更新代码片段' })
