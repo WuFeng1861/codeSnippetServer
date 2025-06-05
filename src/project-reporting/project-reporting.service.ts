@@ -40,9 +40,9 @@ export class ProjectReportingService implements OnModuleInit {
         serviceName: process.env.SERVICE_NAME || 'Alpha-service',
         serverIp,
         servicePort: process.env.PORT || 0,
-        serviceNotes: 'Alpha-service',
+        serviceNotes: 'Code-snippets-service',
         serviceRuntime: runtimeSeconds,
-        serviceDescription: 'NestJS Alpha Service with MySQL',
+        serviceDescription: 'NestJS Code-snippets Service with MySQL',
         lastRestartTime: this.startTime.toISOString(),
         projectPassword: process.env.SERVER_PASSWORD
       };
