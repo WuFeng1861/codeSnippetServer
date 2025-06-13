@@ -3,6 +3,7 @@ import { IsArray, IsNotEmpty, IsOptional, IsString, Length } from 'class-validat
 
 export class UpdateSnippetDto {
   @ApiProperty({ description: '代码片段ID', example: 1 })
+  @IsNotEmpty({ message: '代码片段ID不能为空' })
   id: number;
   
   @ApiProperty({ description: '代码片段标题', example: '快速排序算法' })

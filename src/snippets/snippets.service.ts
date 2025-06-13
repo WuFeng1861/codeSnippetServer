@@ -61,12 +61,11 @@ export class SnippetsService {
     snippet.tagIds = updateSnippetDto.tagIds;
     snippet.userId = userId;
     
-    await this.snippetsRepository.save(snippet);
-    
     // 获取标签并关联
     if (updateSnippetDto.tagIds && updateSnippetDto.tagIds.length > 0) {
       snippet.tags = await this.tagsService.findByIds(updateSnippetDto.tagIds);
     }
+    await this.snippetsRepository.save(snippet);
     return snippet;
   }
   
